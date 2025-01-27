@@ -7,14 +7,12 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
- 
   const logo1 = '/images/logo1.png';
   const logo2 = '/images/logo2.png';
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
-
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,7 +29,7 @@ export default function Navbar() {
                 src={logo1}
                 alt="Logo 1"
                 className="h-16 w-16 object-contain cursor-pointer"
-                onClick={scrollToTop} 
+                onClick={scrollToTop}
               />
             )}
             {logo2 && (
@@ -39,12 +37,11 @@ export default function Navbar() {
                 src={logo2}
                 alt="Logo 2"
                 className="h-[12.25rem] w-[12.25rem] object-contain cursor-pointer"
-                onClick={scrollToTop} 
+                onClick={scrollToTop}
               />
             )}
           </div>
 
-          
           <div className="sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -54,7 +51,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          
+          {/* Desktop Links */}
           <div className="hidden sm:flex sm:items-center sm:space-x-6">
             <ScrollLink
               to="about"
@@ -85,6 +82,16 @@ export default function Navbar() {
               className="text-gray-800 hover:text-indigo-600 cursor-pointer"
             >
               Contact
+            </ScrollLink>
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={handleLinkClick}
+              className="text-gray-800 hover:text-indigo-600 cursor-pointer"
+            >
+              Services
             </ScrollLink>
             <a
               href="/enquiry"
@@ -129,6 +136,16 @@ export default function Navbar() {
             className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
           >
             Contact
+          </ScrollLink>
+          <ScrollLink
+            to="services"
+            smooth={true}
+            duration={500}
+            offset={-70}
+            onClick={handleLinkClick}
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+          >
+            Services
           </ScrollLink>
           <a
             href="/enquiry"

@@ -7,9 +7,9 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isExpanded, setIsExpanded] = useState(false); 
+  const [isExpanded, setIsExpanded] = useState(false);
   const images = [
-    '/images/slide_9.jpg',
+    '/images/slide_1.jpg',
     '/images/slide_2.jpg',
     '/images/slide_3.jpg',
     '/images/slide_4.jpg',
@@ -17,7 +17,7 @@ export default function Home() {
     '/images/slide_6.jpg',
     '/images/slide_7.jpg',
     '/images/slide_8.jpg',
-    '/images/slide_1.jpg',
+    '/images/slide_9.jpg',
     '/images/slide_10.jpg',
   ];
 
@@ -73,14 +73,13 @@ export default function Home() {
   - Proven Results: Delivering increased visibility, foot traffic, and sales for our clients.
   - Dedicated Support: Offering exceptional customer service for a seamless experience.`;
 
- 
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 3000); 
+    }, 3000);
 
-    return () => clearInterval(interval); 
-  }, [currentIndex]); 
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
@@ -89,10 +88,9 @@ export default function Home() {
 
       {/* Scrollable Images Section */}
       <section className="h-[75vh] overflow-hidden bg-gray-100 relative">
-       
         <div
           className="absolute left-0 w-full h-full flex items-center justify-center z- bg-black bg-opacity-50"
-          style={{ transform: 'translateY(10%)' }} 
+          style={{ transform: 'translateY(10%)' }}
         >
           <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
             Welcome to Blooming Tech Solutions
@@ -140,11 +138,9 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-indigo-700 mb-4">About Us</h2>
         <p className="text-gray-600">{aboutText}</p>
 
-    
         <h3 className="text-xl font-semibold text-indigo-700 mt-4">Who We Are</h3>
         <p className="text-gray-600">{whoWeAreText}</p>
 
-      
         <div
           style={{
             maxHeight: isExpanded ? 'none' : '190px',
@@ -152,7 +148,6 @@ export default function Home() {
             transition: 'max-height 0.3s ease-out',
           }}
         >
-          
           {isExpanded && (
             <>
               <h3 className="text-xl font-semibold text-indigo-700 mt-4">Our Services</h3>
@@ -201,11 +196,34 @@ export default function Home() {
             Contact Us
           </h2>
           <div className="space-y-4 text-gray-700">
-            <p>XYZ INDUSTRIES PVT. LTD</p>
-            <p>Plot No 1010, "Ganeshay Nilaya", Radhe road, Vinayak Nagar, Belagavi 590001</p>
-            <p>
-              <strong>Contact Numbers:</strong>
-            </p>
+            <center>
+              <p>
+                <font size="5" color="red" face="impact">
+                  Blooming
+                  <font size="5" color="blue" face="impact">
+                    Tech
+                    <font size="5" color="darkgreen" face="impact">
+                      Solutions
+                      <font size="5" color="red" face="impact">
+                        Belagavi
+                      </font>
+                    </font>
+                  </font>
+                </font>
+              </p>
+              <p>
+                <strong>
+                  Plot No 99, "Neelraj Nilay", Gulmohar marg, Vinayak Nagar,
+                  Belagavi 590001
+                </strong>
+              </p>
+              <p>
+                <br></br>
+                <font size="4" color="darkblue" face="impact">
+                  Contact Numbers:
+                </font>
+              </p>
+            </center>
             <p className="flex items-center gap-2">
               <FiPhone className="text-blue-500" /> 0831-2345321
             </p>
@@ -216,7 +234,8 @@ export default function Home() {
               <FaPhoneAlt className="text-green-500" /> +919949430103
             </p>
             <p className="flex items-center gap-2">
-              <FaEnvelope className="text-red-500" /> info@bloomingtechsolutions.com
+              <FaEnvelope className="text-red-500" />
+              info@bloomingtechsolutions.in
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com" target="_blank" className="text-blue-600">
@@ -232,11 +251,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-  
-   <footer className="bg-gray-900 text-white text-center py-2 mt-auto">
+
+      {/* Services Section */}
+      <section id="services" className="p-6 bg-green-50">
+        <h2 className="text-3xl font-bold text-green-700 mb-4">Our Services</h2>
+        <div className="space-y-4 text-gray-700">
+          <p><strong>1. Digital Advertising:</strong> High-quality ads displayed on strategically placed screens.</p>
+          <p><strong>2. Campaign Management:</strong> End-to-end planning, execution, and monitoring.</p>
+          <p><strong>3. Creative Content:</strong> Stunning visuals and impactful messaging tailored to your audience.</p>
+          <p><strong>4. Analytics-Driven Insights:</strong> Data-backed strategies to enhance ad reach and effectiveness.</p>
+        </div>
+      </section>
+
+      <footer className="bg-gray-900 text-white text-center py-2 mt-auto">
         <p>&copy; {new Date().getFullYear()} Blooming Tech Solutions. All rights reserved.</p>
       </footer>
     </div>
-    
   );
 }
