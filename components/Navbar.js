@@ -64,6 +64,16 @@ export default function Navbar() {
               About
             </ScrollLink>
             <ScrollLink
+              to="services"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={handleLinkClick}
+              className="text-gray-800 hover:text-indigo-600 cursor-pointer"
+            >
+              Services
+            </ScrollLink>
+            <ScrollLink
               to="showcase"
               smooth={true}
               duration={500}
@@ -82,16 +92,6 @@ export default function Navbar() {
               className="text-gray-800 hover:text-indigo-600 cursor-pointer"
             >
               Contact
-            </ScrollLink>
-            <ScrollLink
-              to="services"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={handleLinkClick}
-              className="text-gray-800 hover:text-indigo-600 cursor-pointer"
-            >
-              Services
             </ScrollLink>
             <a
               href="/enquiry"
@@ -118,6 +118,16 @@ export default function Navbar() {
             About
           </ScrollLink>
           <ScrollLink
+            to="services"
+            smooth={true}
+            duration={500}
+            offset={-70}
+            onClick={handleLinkClick}
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+          >
+            Services
+          </ScrollLink>
+          <ScrollLink
             to="showcase"
             smooth={true}
             duration={500}
@@ -136,16 +146,6 @@ export default function Navbar() {
             className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
           >
             Contact
-          </ScrollLink>
-          <ScrollLink
-            to="services"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            onClick={handleLinkClick}
-            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-          >
-            Services
           </ScrollLink>
           <a
             href="/enquiry"
