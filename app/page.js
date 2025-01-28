@@ -166,7 +166,17 @@ export default function Home() {
           {isExpanded ? 'See Less' : 'See More'}
         </button>
       </section>
-
+        {/* Services Section */}
+      <section id="services" className="p-6 bg-green-50">
+        <h2 className="text-3xl font-bold text-green-700 mb-4">Our Services</h2>
+        <div className="space-y-4 text-gray-700">
+          <p><strong>1. Digital Advertising:</strong> High-quality ads displayed on strategically placed screens.</p>
+          <p><strong>2. Campaign Management:</strong> End-to-end planning, execution, and monitoring.</p>
+          <p><strong>3. Creative Content:</strong> Stunning visuals and impactful messaging tailored to your audience.</p>
+          <p><strong>4. Analytics-Driven Insights:</strong> Data-backed strategies to enhance ad reach and effectiveness.</p>
+        </div>
+      </section>
+      
       {/* Showcase Section */}
       <section id="showcase" className="p-6 bg-teal-50 mt-0">
         <h2 className="text-3xl font-bold text-teal-700 mb-4">Our Showcase</h2>
@@ -252,16 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="p-6 bg-green-50">
-        <h2 className="text-3xl font-bold text-green-700 mb-4">Our Services</h2>
-        <div className="space-y-4 text-gray-700">
-          <p><strong>1. Digital Advertising:</strong> High-quality ads displayed on strategically placed screens.</p>
-          <p><strong>2. Campaign Management:</strong> End-to-end planning, execution, and monitoring.</p>
-          <p><strong>3. Creative Content:</strong> Stunning visuals and impactful messaging tailored to your audience.</p>
-          <p><strong>4. Analytics-Driven Insights:</strong> Data-backed strategies to enhance ad reach and effectiveness.</p>
-        </div>
-      </section>
+     
 
       <footer className="bg-gray-900 text-white text-center py-2 mt-auto">
         <p>&copy; {new Date().getFullYear()} Blooming Tech Solutions. All rights reserved.</p>
