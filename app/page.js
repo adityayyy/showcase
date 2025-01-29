@@ -92,8 +92,8 @@ export default function Home() {
           className="absolute left-0 w-full h-full flex items-center justify-center z- bg-black bg-opacity-50"
           style={{ transform: 'translateY(10%)' }}
         >
-          <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
-            Welcome to Blooming Tech Solutions
+          <h1 className="font-serif font-semibold text-white text-4xl md:text-6xl font-bold text-center">
+            Shri Sai Enterprises
           </h1>
         </div>
 
@@ -207,20 +207,6 @@ export default function Home() {
           </h2>
           <div className="space-y-4 text-gray-700">
             <center>
-              <p>
-                <font size="5" color="red" face="impact">
-                  Blooming
-                  <font size="5" color="blue" face="impact">
-                    Tech
-                    <font size="5" color="darkgreen" face="impact">
-                      Solutions
-                      <font size="5" color="red" face="impact">
-                        Belagavi
-                      </font>
-                    </font>
-                  </font>
-                </font>
-              </p>
               <p>
                 <strong>
                   Plot No 99, "Neelraj Nilay", Gulmohar marg, Vinayak Nagar,

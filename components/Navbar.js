@@ -8,7 +8,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const logo1 = '/images/logo1.png';
-  const logo2 = '/images/logo2.png';
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -28,15 +27,7 @@ export default function Navbar() {
               <img
                 src={logo1}
                 alt="Logo 1"
-                className="h-16 w-16 object-contain cursor-pointer"
-                onClick={scrollToTop}
-              />
-            )}
-            {logo2 && (
-              <img
-                src={logo2}
-                alt="Logo 2"
-                className="h-[12.25rem] w-[12.25rem] object-contain cursor-pointer"
+                className="h-40 w-40 object-contain cursor-pointer"
                 onClick={scrollToTop}
               />
             )}

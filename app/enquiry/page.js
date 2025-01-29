@@ -78,7 +78,7 @@ export default function Enquiry() {
           <img
             src="images/enquiry.png" // Replace with your logo path
             alt="Logo"
-            className="w-64 sm:w-80 md:w-96 lg:w-64 mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-5 h-auto" // Adjust margin for different screen sizes
+            className="w-64 sm:w-80 md:w-96 lg:w-64 mt-0 sm:mt-16 md:mt-0 lg:mt-24 mb-5 h-auto" // Adjust margin for different screen sizes
           />
         </div>
 
