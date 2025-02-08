@@ -192,9 +192,6 @@ export default function Home() {
                 alt={`Showcase Image ${index + 1}`}
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white text-center">
-                Image {index + 1} description
-              </div>
             </div>
           ))}
         </div>
@@ -202,33 +199,32 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="p-6 bg-blue-50 flex items-center justify-center">
-  <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6">
-    <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center">Contact Us</h2>
-    <p className="text-2xl font-bold text-center mb-4">Shri Sai Enterprizes</p>
-    <div className="space-y-4 text-slate-700 text-center">
-      <p>
-        <strong>Shop No. 1, CTS No. 7905, Sector No. 12, Mahantesh Nagar, M.M. Extension, Belagavi.</strong>
-      </p>
-      <p>
-        <a href="https://maps.app.goo.gl/AEEEFsg1pyJPr1z58" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-          Click here for address
-        </a>
-      </p>
-      <p className="flex items-center justify-center gap-2">
-        <FaPhoneAlt className="text-green-500" /> 
-        <a href="tel:+918884119169" className="text-blue-600 underline">8884119169</a>
-      </p>
-      <p className="flex items-center justify-center gap-2">
-        <FaPhoneAlt className="text-green-500" /> 
-        <a href="tel:+918867308748" className="text-blue-600 underline">8867308748</a>
-      </p>
-      <p className="flex items-center justify-center gap-2">
-        <FaEnvelope className="text-red-500" /> shrisaienterprises299@gmail.com
-      </p>
-    </div>
-  </div>
-</section>
-
+        <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center">Contact Us</h2>
+          <p className="text-2xl font-bold text-center mb-4">Shri Sai Enterprizes</p>
+          <div className="space-y-4 text-slate-700 text-center">
+            <p>
+              <strong>Shop No. 1, CTS No. 7905, Sector No. 12, Mahantesh Nagar, M.M. Extension, Belagavi.</strong>
+            </p>
+            <p>
+              <a href="https://maps.app.goo.gl/AEEEFsg1pyJPr1z58" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                Click here for address
+              </a>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <FaPhoneAlt className="text-green-500" /> 
+              <a href="tel:+918884119169" className="text-blue-600 underline">8884119169</a>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <FaPhoneAlt className="text-green-500" /> 
+              <a href="tel:+918867308748" className="text-blue-600 underline">8867308748</a>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <FaEnvelope className="text-red-500" /> shrisaienterprises299@gmail.com
+            </p>
+          </div>
+        </div>
+      </section>
 
       <footer className="bg-gray-900 text-white text-center py-2 mt-auto">
         <p>&copy; {new Date().getFullYear()} Shri Sai Enterprizes. All rights reserved.</p>
