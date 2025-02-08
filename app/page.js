@@ -1,15 +1,10 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import { FiPhone } from 'react-icons/fi';
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 
 export default function Home() {
-  // Set your location here (used for the clickable link below)
-  const locationQuery = "";
-  const encodedLocation = encodeURIComponent(locationQuery);
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const images = [
@@ -58,21 +53,6 @@ export default function Home() {
     }
   };
 
-  const aboutText = `Welcome to Shri Sai Enterprizes, your trusted provider of solar rooftop solutions and solar water heaters. We are dedicated to harnessing the power of renewable energy to create a sustainable and energy-efficient future. Our mission is to offer high-quality solar solutions that help homeowners and businesses reduce their carbon footprint and energy costs.`;
-
-  const whoWeAreText = `At Shri Sai Enterprizes, we are a team of passionate professionals committed to delivering top-tier solar energy products and services. With years of expertise in the renewable energy sector, we specialize in the design, installation, and maintenance of solar rooftops and solar water heating systems. Our focus is on providing reliable and cost-effective energy solutions that cater to the needs of both residential and commercial clients.`;
-  
-  const ourServicesText = `- Solar Rooftop Installation: Customized solar panel installations tailored to your energy needs, ensuring maximum efficiency and savings.
-  - Solar Water Heaters: High-quality solar water heating systems designed to provide an eco-friendly and cost-effective hot water solution.
-  - Maintenance & Support: Comprehensive maintenance services to keep your solar systems running optimally.
-  - Energy Consultation: Expert guidance to help you choose the best solar solution based on your energy consumption and budget.`;
-  
-  const whyChooseUsText = `- Quality Assurance: We use only the best-in-class solar products and components to ensure long-lasting performance.
-  - Expert Team: Our skilled professionals bring extensive knowledge and experience in solar energy solutions.
-  - Cost Savings: Our solar solutions significantly reduce electricity bills, providing long-term financial benefits.
-  - Sustainability Commitment: We prioritize eco-friendly energy solutions to promote a greener planet.
-  - Customer Satisfaction: We are dedicated to delivering excellent service and support to ensure complete customer satisfaction.`;
-
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
@@ -83,10 +63,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Scrollable Images Section */}
       <section className="h-[75vh] overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 relative">
         <div
           className="absolute left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60"
@@ -115,7 +93,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Scroll Buttons */}
         <button
           onClick={handlePrevious}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full shadow-lg z-20"
@@ -130,77 +107,6 @@ export default function Home() {
         </button>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="p-6 bg-slate-50 transition-all duration-300 overflow-hidden">
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">About Us</h2>
-        <p className="text-slate-700">{aboutText}</p>
-
-        <h3 className="text-xl font-semibold text-slate-800 mt-4">Who We Are</h3>
-        <p className="text-slate-700">{whoWeAreText}</p>
-
-        <div
-          style={{
-            maxHeight: isExpanded ? 'none' : '190px',
-            overflow: isExpanded ? 'visible' : 'hidden',
-            transition: 'max-height 0.3s ease-out',
-          }}
-        >
-          {isExpanded && (
-            <>
-              <h3 className="text-xl font-semibold text-slate-800 mt-4">Our Services</h3>
-              <p className="text-slate-700">{ourServicesText}</p>
-
-              <h3 className="text-xl font-semibold text-slate-800 mt-4">Why Choose Us?</h3>
-              <p className="text-slate-700">{whyChooseUsText}</p>
-            </>
-          )}
-        </div>
-
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="text-blue-600 mt-4"
-        >
-          {isExpanded ? 'See Less' : 'See More'}
-        </button>
-      </section>
-      
-      {/* Services Section */}
-      <section id="services" className="p-6 bg-slate-100">
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Services</h2>
-        <div className="space-y-4 text-slate-700">
-          <p>
-            If leakage is the issue, we offer a complete range of services to diagnose and repair your roofing problems.
-            Our expert team provides thorough inspections, high-quality materials, and professional repairs to ensure your roof remains secure and energy-efficient.
-          </p>
-          <p>
-            In addition, we specialize in solar rooftop installations and solar water heating systems, helping you enhance property durability while reducing energy costs.
-          </p>
-          <p>
-            Contact us today for a free consultation and let our specialists resolve your roofing concerns.
-          </p>
-        </div>
-      </section>
-      
-      {/* Showcase Section */}
-      <section id="showcase" className="p-6 bg-slate-200 mt-0">
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Showcase</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {showcaseImages.map((src, index) => (
-            <div key={index} className="relative">
-              <img
-                src={src}
-                alt={`Showcase Image ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white text-center">
-                Image {index + 1} description
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
       <section id="contact" className="p-6 bg-blue-50 flex items-center justify-center">
         <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6">
           <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center">
@@ -208,44 +114,6 @@ export default function Home() {
           </h2>
           <p className="text-2xl font-bold text-center mb-4">Shri Sai Enterprizes</p>
           <div className="space-y-4 text-slate-700">
-            <center>
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p>
-                  <strong>{locationQuery}</strong>
-                </p>
-              </a>
-            </center>
-            {/* Responsive Google Maps Box */}
-            <div className="mt-4">
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="relative w-full pb-[56.25%]"> {/* Aspect ratio 16:9 */}
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1738408436804!5m2!1sen!2sin!6m8!1m7!1ssAbHz5fP50MIHNYNHGaYqQ!2m2!1d15.87937949643517!2d74.53090844129557!3f209.4596664044024!4f2.86242733031915!5f0.7820865974627469"
-                    width="600"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0 w-full h-full"
-                  ></iframe>
-                </div>
-              </a>
-              <p className="mt-2">
-                <span className="text-lg text-blue-600 font-semibold">Contact Numbers:</span>
-              </p>
-            </div>
-            <p className="flex items-center gap-2">
-              <FiPhone className="text-blue-500" /> 0831-2345321
-            </p>
             <p className="flex items-center gap-2">
               <FaPhoneAlt className="text-green-500" /> +919740915141
             </p>
@@ -256,12 +124,15 @@ export default function Home() {
               <FaEnvelope className="text-red-500" />
               info@bloomingtechsolutions.in
             </p>
+            <p className="text-center font-semibold mt-4">
+              Shop No. 1, CTS No. 7905, Sector No. 12, Mahantesh Nagar, M.M. Extension, Belagavi.
+            </p>
           </div>
         </div>
       </section>
 
       <footer className="bg-gray-900 text-white text-center py-2 mt-auto">
-        <p>&copy; {new Date().getFullYear()} Shri Sai Enterprizes. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Shri Sai Enterprises. All rights reserved.</p>
       </footer>
     </div>
   );
