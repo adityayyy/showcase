@@ -216,11 +216,11 @@ export default function Home() {
       </p>
       <p className="flex items-center justify-center gap-2">
         <FaPhoneAlt className="text-green-500" /> 
-        <a href="tel:+919740915141" className="text-blue-600 underline">8884119169</a>
+        <a href="tel:+918884119169" className="text-blue-600 underline">8884119169</a>
       </p>
       <p className="flex items-center justify-center gap-2">
         <FaPhoneAlt className="text-green-500" /> 
-        <a href="tel:+919949430103" className="text-blue-600 underline">8867308748</a>
+        <a href="tel:+918867308748" className="text-blue-600 underline">8867308748</a>
       </p>
       <p className="flex items-center justify-center gap-2">
         <FaEnvelope className="text-red-500" /> shrisaienterprises299@gmail.com
