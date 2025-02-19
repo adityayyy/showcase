@@ -92,7 +92,7 @@ export default function Home() {
           className="absolute left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60"
           style={{ transform: 'translateY(5%)' }}
         >
-          <h1 className="font-serif font-semibold text-white text-4xl md:text-6xl font-bold text-center">
+          <h1 className="font-serif font-bold font-serif mb-12 text-white text-4xl md:text-6xl text-center">
             Shri Sai Enterprises
           </h1>
         </div>
