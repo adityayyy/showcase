@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { FiPhone } from 'react-icons/fi';
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Home() {
   // Set your location here (used for the clickable link below)
@@ -87,10 +87,10 @@ export default function Home() {
       <Navbar />
 
       {/* Scrollable Images Section */}
-      <section className="h-[75vh] overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 relative">
+      <section className="h-[60vh] overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 relative">
         <div
           className="absolute left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60"
-          style={{ transform: 'translateY(10%)' }}
+          style={{ transform: 'translateY(5%)' }}
         >
           <h1 className="font-serif font-semibold text-white text-4xl md:text-6xl font-bold text-center">
             Shri Sai Enterprises
@@ -104,7 +104,7 @@ export default function Home() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-screen h-[75vh] snap-center"
+              className="flex-shrink-0 w-screen h-[60vh] snap-center"
             >
               <img
                 src={src}
@@ -115,22 +115,22 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Scroll Buttons */}
+        {/* Swipe Buttons without Backgrounds */}
         <button
           onClick={handlePrevious}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full shadow-lg z-20"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white z-20"
         >
-          <FaLongArrowAltLeft size={10} />
+          <IoIosArrowBack size={16} />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full shadow-lg z-20"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white z-20"
         >
-          <FaLongArrowAltRight size={10} />
+          <IoIosArrowForward size={16} />
         </button>
       </section>
 
-      {/* About Section */}
+      {/* About Us Section */}
       <section id="about" className="p-6 bg-slate-50 transition-all duration-300 overflow-hidden">
         <h2 className="text-3xl font-bold text-slate-800 mb-4">About Us</h2>
         <p className="text-slate-700">{aboutText}</p>
