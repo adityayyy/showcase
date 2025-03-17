@@ -32,18 +32,18 @@ export default function Enquiry() {
 
     const templateParams = {
       customerName: formData.customerName,
-      address: formData.address,
       contactNumber: formData.contactNumber,
-      requirements: formData.requirements,
+      businessType: formData.requirements,
+      businessAddress: formData.address,
       followUp: formData.followUp,
     };
 
     try {
       const response = await emailjs.send(
-        'service_d1tzgxe',
-        'template_wq9sl2m',
+        'service_d1tzgxe', // Service ID
+        'template_wq9sl2m', // Template ID
         templateParams,
-        'x7386ajUHPg8_m23o'
+        'x7386ajUHPg8_m23o' // Public Key
       );
 
       console.log('Success:', response.status, response.text);
